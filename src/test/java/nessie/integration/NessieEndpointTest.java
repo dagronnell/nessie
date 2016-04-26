@@ -60,7 +60,7 @@ public class NessieEndpointTest {
         return given()
                 .contentType(ContentType.JSON)
                 .when()
-                .param("choice", lakeChoice)
+                .param("lake", lakeChoice)
                 .param("change", changeLake)
                 .get(PATH)
                 .then()

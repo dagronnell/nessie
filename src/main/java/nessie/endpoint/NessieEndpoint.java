@@ -12,7 +12,7 @@ public class NessieEndpoint {
 
     @RequestMapping("/findNessie")
     public ResponseEntity findNessie(
-            @RequestParam("choice") Integer lakeChoice,
+            @RequestParam("lake") Integer lakeChoice,
             @RequestParam("change") Boolean changeLakes
     ) {
         try {
