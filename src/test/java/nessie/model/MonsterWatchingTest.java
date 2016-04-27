@@ -21,7 +21,7 @@ public class MonsterWatchingTest {
     }
 
     @Test
-    public void chooseLake0AndDontChangeAndLooseWhenNessieIsInLake1() throws Exception {
+    public void chooseLake0AndDontChangeAndMissWhenNessieIsInLake1() throws Exception {
         RandomGeneratorService randomMock = mockRandomService(1);
         monsterWatching = new MonsterWatching(0, randomMock);
 
@@ -29,14 +29,14 @@ public class MonsterWatchingTest {
     }
 
     @Test
-    public void chooseLake0AndDontChangeAndWinWhenNessieIsInLake0() throws Exception {
+    public void chooseLake0AndDontChangeAndFindWhenNessieIsInLake0() throws Exception {
         RandomGeneratorService randomMock = mockRandomService(0);
         monsterWatching = new MonsterWatching(0, randomMock);
         assertThatNessieIsFound();
     }
 
     @Test
-    public void chooseLake0AndChangeAndWinWhenNessieIsInLake1() throws Exception {
+    public void chooseLake0AndChangeAndFindWhenNessieIsInLake1() throws Exception {
         RandomGeneratorService randomMock = mockRandomService(1);
         monsterWatching = new MonsterWatching(0, randomMock);
         monsterWatching.changeLakes();
@@ -44,7 +44,7 @@ public class MonsterWatchingTest {
     }
 
     @Test
-    public void chooseLake0AndChangeAndWinWhenNessieIsInLake2() throws Exception {
+    public void chooseLake0AndChangeAndFindWhenNessieIsInLake2() throws Exception {
         RandomGeneratorService randomMock = mockRandomService(2);
         monsterWatching = new MonsterWatching(0, randomMock);
         monsterWatching.changeLakes();
@@ -52,7 +52,7 @@ public class MonsterWatchingTest {
     }
 
     @Test
-    public void chooseLake0AndChangeAndLooseWhenNessieIsInLake0() throws Exception {
+    public void chooseLake0AndChangeAndMissWhenNessieIsInLake0() throws Exception {
         RandomGeneratorService randomMock = mockRandomService(0);
         monsterWatching = new MonsterWatching(0, randomMock);
         monsterWatching.changeLakes();
